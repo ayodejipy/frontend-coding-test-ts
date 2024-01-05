@@ -5,14 +5,14 @@ import {
   ApolloClient,
   createHttpLink,
   InMemoryCache,
+  gql,
 } from '@apollo/client/core'
 import App from './App.vue'
 import initializeRouter from './router'
-// graphql setup
 
+// graphql setup
 const httpLink = createHttpLink({
-  // You should use an absolute URL here
-  uri: 'http://localhost:3020/graphql',
+  uri: 'https://metaphysics-production.artsy.net/v2',
 })
 
 const cache = new InMemoryCache()

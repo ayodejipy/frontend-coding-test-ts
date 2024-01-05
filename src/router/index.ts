@@ -8,6 +8,7 @@ import {
 import LayoutMain from '../components/layout/LayoutMain.vue'
 import Error from '../views/Error.vue'
 import Home from '../views/Home.vue'
+import ArtsPage from '../views/ArtsPage.vue'
 
 const mainRoutes: RouteRecordRaw[] = [
   {
@@ -31,6 +32,11 @@ const routes: RouteRecordRaw[] = [
     props: true,
     component: LayoutMain,
     children: mainRoutes,
+  },
+  {
+    path: '/arts',
+    name: 'Arts Page',
+    component: ArtsPage,
   },
 ]
 
