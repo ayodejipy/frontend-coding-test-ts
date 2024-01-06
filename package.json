@@ -13,6 +13,7 @@
     "@vue/apollo-composable": "^4.0.0-beta.12",
     "@vueuse/core": "^10.7.1",
     "axios": "^1.5.0",
+    "nanoid": "^5.0.4",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
@@ -20,6 +21,7 @@
     "@vitejs/plugin-vue": "^4.3.4",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/eslint-config-typescript": "^11.0.3",
+    "@vue/test-utils": "^2.4.3",
     "autoprefixer": "^10.4.15",
     "eslint": "^8.48.0",
     "eslint-config-airbnb-base": "^15.0.0",

@@ -20,10 +20,18 @@
 import { computed } from 'vue'
 import type { ICharacter } from '../types/character'
 import useFetch from '../composables/useFetch'
+import useToasts from '../composables/useToasts'
 import Character from '../components/Character.vue'
+
+const { success } = useToasts()
+
+success('Is this working', {
+  title: 'Testing toast',
+})
 
 const { isFetching, error, data } = await useFetch('characters')
 
-const characters = computed<ICharacter[]>(() => JSON.parse(data.value as string))
+const characters = computed<ICharacter[]>(() =>
+  JSON.parse(data.value as string),
+)
 </script>
-../types/artwork
