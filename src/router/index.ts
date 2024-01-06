@@ -8,7 +8,8 @@ import {
 import LayoutMain from '../components/layout/LayoutMain.vue'
 import Error from '../views/Error.vue'
 import Home from '../views/Home.vue'
-import ArtsPage from '../views/ArtsPage.vue'
+import TheCharacters from '../views/TheCharacters.vue'
+import Character from '../views/Character.vue'
 
 const mainRoutes: RouteRecordRaw[] = [
   {
@@ -16,6 +17,18 @@ const mainRoutes: RouteRecordRaw[] = [
     name: 'Home',
     props: true,
     component: Home,
+  },
+  {
+    path: '/characters',
+    name: 'TheCharacters',
+    props: true,
+    component: TheCharacters,
+  },
+  {
+    path: '/character/:id',
+    name: 'TheCharacter',
+    props: true,
+    component: Character,
   },
 ]
 
@@ -32,11 +45,6 @@ const routes: RouteRecordRaw[] = [
     props: true,
     component: LayoutMain,
     children: mainRoutes,
-  },
-  {
-    path: '/arts',
-    name: 'Arts Page',
-    component: ArtsPage,
   },
 ]
 
