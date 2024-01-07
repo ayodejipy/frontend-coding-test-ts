@@ -25,13 +25,10 @@ import Character from '../components/Character.vue'
 
 const { success } = useToasts()
 
-success('Is this working', {
-  title: 'Testing toast',
-})
+// fetches as a get req and parses response to json()
+const { error, data } = await useFetch('characters1').get().json()
 
-const { isFetching, error, data } = await useFetch('characters')
+console.log(error)
 
-const characters = computed<ICharacter[]>(() =>
-  JSON.parse(data.value as string),
-)
+const characters = computed<ICharacter[]>(() => data.value)
 </script>

@@ -5,6 +5,7 @@
       class="h-full w-full rounded-xl object-cover cursor-pointer"
       v-bind:src="character.image"
       v-bind:alt="character.actor"
+      data-testid="actor-image"
     />
     <img
       v-else
@@ -19,7 +20,7 @@
 import { RouterLink } from 'vue-router'
 import type { ICharacter } from '../types/character'
 
-const props = defineProps<{
+defineProps<{
   character: ICharacter
 }>()
 </script>

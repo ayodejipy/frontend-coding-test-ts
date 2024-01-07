@@ -14,8 +14,6 @@ export interface Toast extends Options {
 }
 
 export default function useToasts() {
-  //   const { toasts } = useStore()
-
   function dismiss(idOrToast: string | Toast) {
     const id = typeof idOrToast === 'string' ? idOrToast : idOrToast.id
     toasts.value = toasts.value.filter((toast) => toast.id !== id)
