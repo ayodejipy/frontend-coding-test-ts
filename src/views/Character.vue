@@ -1,7 +1,7 @@
 <template>
   <section class="w-full max-w-full">
     <div
-      v-if="character"
+      v-if="character && !isFetching"
       class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14"
     >
       <div
@@ -120,6 +120,13 @@
       <div
         class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"
       />
+    </div>
+
+    <div v-else>
+      <div class="flex items-start gap-8 animate-pulse">
+        <div class="bg-slate-300 w-full h-64 rounded-xl"></div>
+        <div class="bg-slate-300 w-48 h-48 rounded-full"></div>
+      </div>
     </div>
   </section>
 </template>

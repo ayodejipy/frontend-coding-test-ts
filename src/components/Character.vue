@@ -1,5 +1,8 @@
 <template>
-  <router-link v-bind:to="`/character/${character.id}`">
+  <router-link
+    v-bind:to="`/character/${character.id}`"
+    data-testid="image-link"
+  >
     <img
       v-if="character.image"
       class="h-full w-full rounded-xl object-cover cursor-pointer"

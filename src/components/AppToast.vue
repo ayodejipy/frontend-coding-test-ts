@@ -8,6 +8,7 @@
         v-bind:key="toast.id"
         class="mb-4 border-t-[1px] shadow-sm rounded-lg toast bg-gray-200 py-2 !pr-0"
         v-bind:class="classes[toast.type as string]"
+        data-testid="toast"
       >
         <div class="flex justify-between sm:w-80">
           <div class="flex items-center">
@@ -36,7 +37,7 @@ const { toasts, dismiss } = useToasts()
 
 const classes = reactive<{ [key: string]: string }>({
   success: 'border-t-green-500',
-  danger: 'border-t-red-600',
+  error: 'border-t-red-600',
   info: 'border-t-blue-600',
   warning: 'border-t-yellow-600',
 })
